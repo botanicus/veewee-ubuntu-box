@@ -3,16 +3,18 @@ wget -O ruby-install-0.4.3.tar.gz https://github.com/postmodern/ruby-install/arc
 tar -xzvf ruby-install-0.4.3.tar.gz
 cd ruby-install-0.4.3/
 make install
-rm -rf ruby-install-0.4.3 ruby-install-0.4.3.tar.gz
 
 # Install MRI.
-ruby-install ruby
+ruby-install ruby -- --disable-install-doc
 
-RUBYBIN=/opt/rubies/ruby-*/bin
-echo "PATH=$RUBYBIN:$PATH" | tee /etc/profile.d/ruby.sh
+RUBYBIN="$(echo /opt/rubies/ruby-*)/bin"
+echo "PATH=$RUBYBIN:\$PATH" | tee /etc/profile.d/ruby.sh
 
 # No RDoc, no RI.
 echo "gem: --no-ri --no-rdoc" | tee ~/.gemrc
 
 # Bundler.
-$RUBYBIN/gem install bundler
+. /etc/environment
+. /etc/profile.d/ruby.sh
+
+gem install bundler

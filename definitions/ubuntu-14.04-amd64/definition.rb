@@ -41,12 +41,13 @@ Veewee::Session.declare({
    'base/vagrant.sh',
    'base/ruby.sh',
    'base/vbox.sh',
+   'base/nfs.sh',
 
-   'extra/rubinius.sh',
    'extra/nginx.sh',
+   'extra/redis.sh',
    'extra/rabbitmq.sh',
+   'extra/rubinius.sh',
    'extra/convenience.sh',
-   # 'extra/nfs.sh',
 
    'base/cleanup.sh'
   ],

@@ -1,6 +1,12 @@
 ruby-install rbx
-RUBYBIN=/opt/rubies/rbx-*/bin
-echo "PATH=$RUBYBIN:$PATH" | tee /etc/profile.d/rubinius.sh
+
+RUBYBIN="$(echo /opt/rubies/rbx-*)/bin"
+RUBYGEMSBIN="$(echo /opt/rubies/rbx-*)/gems/bin"
+
+echo "PATH=$RUBYBIN:$RUBYGEMSBIN:\$PATH" | tee /etc/profile.d/rubinius.sh
 
 # Bundler
-$RUBYBIN/gem install bundler
+. /etc/environment
+. /etc/profile.d/rubinius.sh
+
+gem install bundler

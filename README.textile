@@ -1,0 +1,4 @@
+# Instead of vagrant basebox export which doesn't work,
+# as Vagrant doesn't load the basebox plugin from Veewee:
+rm ubuntu-13.04-amd64.box
+vagrant package --base ubuntu-13.04-amd64 --output ubuntu-13.04-amd64.box
