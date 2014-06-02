@@ -18,5 +18,10 @@ rm -rf ~/* /home/vagrant/*
 echo "we don't need the Ubuntu Ruby"
 apt-get -y remove ruby
 
+# This is originally because of Rubinius.
+# sudo chown vagrant -R ~vagrant/.rbx
+echo "make sure everything belongs to vagrant"
+chown vagrant -R ~vagrant
+
 echo "pre-up sleep 2" >> /etc/network/interfaces
 exit

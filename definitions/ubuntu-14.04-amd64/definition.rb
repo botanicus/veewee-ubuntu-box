@@ -48,6 +48,7 @@ Veewee::Session.declare({
    'extra/rabbitmq.sh',
    'extra/rubinius.sh',
    'extra/convenience.sh',
+   'extra/etc-git.sh',
 
    'base/cleanup.sh'
   ],
