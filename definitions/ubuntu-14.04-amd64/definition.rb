@@ -46,6 +46,7 @@ Veewee::Session.declare({
    'extra/nginx.sh',
    'extra/redis.sh',
    'extra/rabbitmq.sh',
+   'extra/nodejs.sh',
    'extra/rubinius.sh',
    'extra/convenience.sh',
    'extra/etc-git.sh',
