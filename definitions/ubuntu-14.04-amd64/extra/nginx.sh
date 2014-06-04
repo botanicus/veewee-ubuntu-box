@@ -11,3 +11,5 @@ respawn
 
 exec /usr/sbin/nginx -g "daemon off;"
 EOF
+
+update-rc.d nginx disable
