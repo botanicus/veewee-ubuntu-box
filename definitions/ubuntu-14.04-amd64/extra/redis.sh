@@ -20,8 +20,10 @@ update-rc.d redis-server disable
 
 tee /etc/init/redis-server.conf <<-EOF
 # From https://gist.github.com/bdotdub/714533.
-# Also good tip to run change redis.conf -> deamonized no
-description "Redis server"
+
+# There's no config and neither we want one.
+# If there will be any in the future, don't
+# forget to make sure that daemonized is no.
 
 # optional to run under the redis user
 #setgid redis
@@ -30,7 +32,7 @@ description "Redis server"
 start on runlevel [23]
 stop on shutdown
 
-exec redis-server /etc/redis/redis.conf
+exec redis-server
 
 respawn
 EOF

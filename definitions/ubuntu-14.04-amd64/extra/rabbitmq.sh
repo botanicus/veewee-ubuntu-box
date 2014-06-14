@@ -20,7 +20,7 @@ start on runlevel [2345]
 stop on runlevel [016]
 respawn
 
-exec /usr/sbin/rabbitmq-server > /var/log/rabbitmq/startup_log \
-                              2> /var/log/rabbitmq/startup_err
+exec /usr/sbin/rabbitmq-server
+
 post-start exec /usr/sbin/rabbitmqctl wait >/dev/null 2>&1
 EOF
