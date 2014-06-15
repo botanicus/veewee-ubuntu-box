@@ -12,7 +12,7 @@ bundle install
 
 veewee vbox destroy ubuntu-14.04-amd64 && vagrant box remove ubuntu-14.04-amd64 && rm ubuntu-14.04-amd64.box
 
-veewee vbox build ubuntu-14.04-amd64 -n --force && veewee vbox export ubuntu-14.04-amd64 --force && vagrant box add ubuntu-14.04-amd64 ubuntu-14.04-amd64.box --force && scp ubuntu-14.04-amd64.box server:/webs/static
+veewee vbox build ubuntu-14.04-amd64 -n --force &> ~/Desktop/veewee.log && veewee vbox export ubuntu-14.04-amd64 --force && vagrant box add ubuntu-14.04-amd64 ubuntu-14.04-amd64.box --force && scp ubuntu-14.04-amd64.box server:/webs/static
 ```
 
 Now do `vagrant destroy --force && vagrant up`.
