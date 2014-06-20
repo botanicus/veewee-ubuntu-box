@@ -26,6 +26,10 @@ gem install veewee
 RUBYLIB=$(echo /Library/Ruby/Gems/2.0.0/gems/*/lib | tr ' ' :) veewee vbox build ubuntu-14.04-amd64
 ```
 
+## TODO
+
+After ZSH is install I can use zsh shebang right?
+
 ## Links
 
 - [Packer.io](http://www.packer.io) is an alternative to Veewee.
