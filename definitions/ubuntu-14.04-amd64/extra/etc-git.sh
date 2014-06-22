@@ -1,4 +1,4 @@
 cd /etc
-sudo git init
-sudo git add .
-sudo git commit -m "Blankslate."
+git init
+git add .
+git commit -m "Blankslate."
