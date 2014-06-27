@@ -1,7 +1,13 @@
 # Install ruby-install.
-wget -O ruby-install-0.4.3.tar.gz https://github.com/postmodern/ruby-install/archive/v0.4.3.tar.gz
-tar -xzvf ruby-install-0.4.3.tar.gz
-cd ruby-install-0.4.3/
+
+# Problem with this motherfucker is that it doesn't have
+# any means to update itself at least as far as I can tell.
+# So first things first, let's at least use HEAD and later
+# TODO: figure out if I can just clone it to /opt and add
+# it to path and use it straight away.
+
+git clone https://github.com/postmodern/ruby-install.git
+cd ruby-install
 make install
 
 # Install MRI.
