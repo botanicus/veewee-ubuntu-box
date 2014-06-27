@@ -1,4 +1,4 @@
-apt-get -y install vim curl git-core
+apt-get -y install vim
 
 # ZSH.
 apt-get install -y zsh

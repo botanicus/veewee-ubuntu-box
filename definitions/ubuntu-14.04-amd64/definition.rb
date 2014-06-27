@@ -39,6 +39,7 @@ Veewee::Session.declare({
    'base/apt.sh',
    'base/sudo.sh',
    'base/vagrant.sh',
+   'base/git-n-curl.sh',
    'base/ruby.sh',
    'base/vbox.sh',
    'base/nfs.sh',
