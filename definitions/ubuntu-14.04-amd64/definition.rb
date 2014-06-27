@@ -43,13 +43,15 @@ Veewee::Session.declare({
    'base/ruby.sh',
    'base/vbox.sh',
    'base/nfs.sh',
+   'base/iptables.sh',
 
    'extra/nginx.sh',
    'extra/redis.sh',
    'extra/rabbitmq.sh',
    'extra/nodejs.sh',
    'extra/rubinius.sh',
-   'extra/jruby.sh',
+   # 'extra/jruby.sh',
+   'extra/monit.sh',
    'extra/convenience.sh',
    'extra/etc-git.sh',
 
